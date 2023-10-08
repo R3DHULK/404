@@ -1,0 +1,42 @@
+/* CSS Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+*{margin:0;padding:0}
+body{width:100%;height:100%;font:12px "Open Sans",sans-serif}
+#wrapper{width:50%;height:560px;overflow:hidden;margin:20px auto;background:#fff;border:1px solid #c6c6c6}
+div.screen{height:560px;overflow:hidden;background:transparent;margin:15px}
+.list{margin-top:36px;text-align:left}
+.item{height:115px;margin-left:115px;clear:both}
+.item .img,.item span{background:#f0f0f0}
+.item .img{float:left;width:96px;height:81px;margin-left:-113px}
+.item span{height:11px;width:320px;margin-bottom:19px;float:left}
+.item span:nth-of-type(3){width:95px;margin-bottom:0}
+a:link{color:#e76e66;text-decoration:none;outline:none;transition:all 0.25s}
+a:visited{color:#666;text-decoration:none}
+a:link:hover{color:#666;text-decoration:none}
+a:visited:hover{color:#e76e66;text-decoration:none}
+
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 120vh;
+  max-width: 120vmin;
+  max-height: 120vmin;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+
+.container p{
+  text-align:center;
+  font-size:30px;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 100%;
+  right: 100%;
+}

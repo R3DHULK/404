@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "stranger";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/455279/stranger.ttf") format("truetype");
+}
+html {
+  background: linear-gradient(0deg, #050514, #30336b);
+  overflow: hidden;
+  height: 100%;
+}
+html body {
+  margin: 0;
+}
+
+.patch {
+  position: absolute;
+  bottom: 0;
+  height: 10vh;
+  width: 3vw;
+  background-color: black;
+  z-index: 2;
+}
+.patch:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 0;
+}
+
+.bottompatch {
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+}
+
+.gravestones .cross {
+  position: absolute;
+  height: 28vh;
+  width: 1.8vh;
+  background-color: black;
+  bottom: 0;
+  z-index: 1;
+}
+.gravestones .cross:after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  height: 1.8vh;
+  width: 10vh;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gravestones .cross:nth-child(1) {
+  left: 20%;
+}
+.gravestones .cross:nth-child(2) {
+  left: 70%;
+  bottom: -4vh;
+}
+.gravestones .cross:nth-child(3) {
+  left: 90%;
+}
+
+.msg {
+  display: none;
+  color: black;
+  font-size: 6.2vh;
+  font-family: "stranger", arial;
+  position: absolute;
+  bottom: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.crypt {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38vh;
+  height: 40vh;
+}
+.crypt .roof {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  -webkit-clip-path: polygon(21% 0%, 79% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(21% 0%, 79% 14%, 100% 100%, 0% 100%);
+}
+.crypt .body {
+  width: 86%;
+  height: 100%;
+  background-color: black;
+  margin: -1vh auto 0 auto;
+}
+.crypt .body .door {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(-3deg);
+  width: 20%;
+  height: 45%;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  background-color: black;
+}
+
+.fog {
+  width: 40vh;
+  height: 20vh;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  animation-name: fog;
+  animation-iteration-count: infinite;
+  animation-duration: 80s;
+}
+
+.moon {
+  position: absolute;
+  top: 8vh;
+  right: 18vh;
+  height: 20vh;
+  width: 20vh;
+  border-radius: 20vh;
+  box-shadow: inset -2vh 0 0 #dfe6e9;
+  transform: rotateZ(32deg);
+}
+
+.title {
+  height: 65vh;
+  margin: 0;
+  position: absolute;
+  left: 49%;
+  bottom: -90vh;
+  opacity: 0.1;
+  transition: filter 3s;
+  transform: translate(-50%, -50%) rotateZ(-4deg);
+  font-family: "stranger", arial;
+  font-size: 60vh;
+  color: #dfe6e9;
+  z-index: 1;
+}
+
+.life {
+  opacity: 1;
+  transition: opacity 4s;
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+.star {
+  height: 1px;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  z-index: 0;
+}
+
+@keyframes fog {
+  0% {
+    filter: blur(10vh);
+    left: -9vw;
+    transform: rotateZ(19deg);
+  }
+  50% {
+    filter: blur(13vh);
+    left: 109vw;
+  }
+  100% {
+    filter: blur(10vh);
+    left: 9vw;
+    transform: rotateZ(-19deg);
+  }
+}
+@keyframes float {
+  0% {
+    top: 45%;
+  }
+  50% {
+    top: 46%;
+  }
+  100% {
+    top: 45%;
+  }
+}
