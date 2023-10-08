@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+* {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.container {
+  height: 100vh;
+}
+
+.block {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 80px;
+  width: 80px;
+  background-image: url('https://pa1.narvii.com/6489/524d20cabd4731dffd6453fb707ab1d2b2b11c52_00.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.mario {
+  position: absolute;
+  width: 78px;
+  height: 68px;
+  background-image: url('https://jakevdp.github.io/images/mario_graphics1.png');
+  background-position-y: -191px;
+  background-position-x: -22px;
+  transition: bottom .3s linear;
+}
+
+.number {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 1px);
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  font-size: 70px;
+  text-shadow:
+		-3px -3px 0 #000,
+		3px -3px 0 #000,
+		-3px 3px 0 #000,
+		3px 3px 0 #000;
+  font-family: 'Bangers', cursive;
+  animation: moveUp 1.5s linear;
+}
+
+@keyframes moveUp {
+  from { transform: translate(-50%, 1px); }
+  to { transform: translate(-50%, -150px); }
+}
+
+.hit {
+  animation: blockHit .2s linear;
+}
+
+@keyframes blockHit {
+  0% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -20px); };
+  100% { transform: translate(-50%, 0); }  
+}

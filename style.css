@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(3, 0, 17, 0.9);
+    color: white;
+}
+
+body {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.box3 {
+    position: relative;
+    gap: 30px;
+    display: flex;
+    background-image: url('/static/images/home2.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    min-width: fit-content;
+    background-size: cover;
+    height: 100%;
+    min-height: fit-content;
+    box-sizing: border-box;
+}
+
+.menu {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: fit-content;
+    position: relative;
+    width: fit-content;
+    background: none;
+    min-height: fit-content;
+    min-width: fit-content;
+}
+
+.tittle {
+    border-radius: 15px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    height: 55px;
+    box-shadow:
+        inset 0 0 40px rgb(245, 245, 245, 0.7),
+        inset 10px 0 80px #f0f,
+        inset -10px 0 80px rgb(0, 132, 255),
+        inset 10px 0 250px #f0f,
+        inset -10px 0 250px #f0f,
+        0 0 30px #f0f, -10px 0 80px #f0f, 10px 0 80px #f0f;
+}
+
+h2 {
+    background: none;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.b {
+    font-family: 'Genos';
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: inline-flex;
+    font-size: 18px;
+    justify-content: center;
+    background: rgba(82, 156, 185, 0.27);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.5px solid rgba(121, 217, 255, 0.27);
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#maker,
+#maker2 {
+    position: absolute;
+    z-index: -1;
+    background: none;
+}
+
+.b:hover #maker {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    width: 17px;
+    height: 9px;
+    background: #6df1e0;
+    box-shadow: 0 0 16px #6df1e0,
+        0 0 30px #6df1e0, 0 0 46px #27c9b3, 0 0 60px #27c9b3;
+    left: 190px;
+    z-index: -3;
+}
+
+.b:hover #maker2 {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    width: 17px;
+    height: 9px;
+    background: #6df1e0;
+    box-shadow: 0 0 16px #6df1e0,
+        0 0 30px #6df1e0, 0 0 46px #27c9b3, 0 0 60px #27c9b3;
+    left: 10px;
+    z-index: -3;
+}
